@@ -1,11 +1,11 @@
 package Clases.Clase2.ListasEnlazadas.Ejercicios;
 
 public class Node<T> {
-    public Alumnos data;
+    public T data;
     public Node<T> next;
     public Node<T> prev;
 
-    public Node(Alumnos data) {
+    public Node(T data) {
         this.data = data;
         this.next = null;
         this.prev = null;

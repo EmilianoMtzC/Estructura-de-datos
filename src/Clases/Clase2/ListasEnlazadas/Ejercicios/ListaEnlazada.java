@@ -1,6 +1,6 @@
 package Clases.Clase2.ListasEnlazadas.Ejercicios;
 
-public class ListaEnlazada {
+public class ListaEnlazada<T> {
 
     //Atributos de la Lista
     public Node<T> head;  // Primer Nodo
@@ -22,7 +22,7 @@ public class ListaEnlazada {
     }
 
     public void appendNode(T data) {
-        Node<T> nuevo = new Node<> (data);
+        Node<T> nuevo = new Node<T>(data);
 
         //Verificar si la lista está vacía
         if (isEmpty()) {
@@ -36,7 +36,8 @@ public class ListaEnlazada {
 
         } else {
             if (tipoLista == 1) {
-                Node<T> actual = head;+while (actual.next != null) {
+                Node<T> actual = head;
+                while (actual.next != null) {
                     actual = actual.next;
                 }
                 actual.next = nuevo;
@@ -53,9 +54,92 @@ public class ListaEnlazada {
             }
             size++;
         }
+    }
+
+    public void showList() {
+
+        // Verificar si la lista está vacía.
+        if(isEmpty()) {
+            IO.println("Nada, no hay nada...");
+            return;
+        }
+        IO.print("Elementos de la lista: ");
+        Node<T> actual = head;
+        int i = 0;
+
+        do{
+            IO.print(actual.data + " -> ");
+            actual = actual.next;
+            if(tipoLista == 3 && actual == head) {
+                break;
+            }
+            i++;
+        } while(actual != null);
+
+        if (tipoLista == 3){
+            IO.println("Fin");
+        } else {
+            IO.println("null");
+        }
+
+    }
+
+    public boolean search(T data) {
+        if (isEmpty()) return false;
+        Node<T> actual = head;
+        do{
+            if (actual.data.equals(data)) return true;
+            actual = actual.next;
+            if (tipoLista == 3 && actual == head) break;
+
+        } while(actual != null);
+        return false;
+    }
+
+    public void eliminar(T data) {
+        if (isEmpty()) {
+            IO.println("Ta mas vacia que mi cartera");
+            return;
+        }
+
+        Node<T> actual = head;
+        Node<T> anterior = null;
+        boolean encontrado = false;
+    // i
+        do {
+            if(actual.data.equals(data)) {
+                encontrado = true;
+                break;
+            }
+            anterior = actual;
+            actual = actual.next;
+            if(tipoLista == 3 && actual == head) break;
 
 
+        } while(actual != null);
+        if(!encontrado) {
+            IO.println("No se encontro el dato");
+            return;
+        }
 
+        if (size == 1) {
+            head = null;
+            tail = null;
+        } else if (actual == head) { // ELIMINAR EL PRIMER ELEMENTO
+            head = head.next;
+            if(tipoLista ==2) head.prev = null;
+            if(tipoLista == 3) tail.next = head;
+        } else if (actual == tail) { // ELIMINAR EL ULTIMO ELEMENTO
+            tail = anterior;
+            if(tipoLista == 2) tail.next = null;
+            if(tipoLista == 3) tail.next = head;
+        } else {                    // ELIMINAR UN ELEMENTO EN MEDIO DE LA LISTA
+            anterior.next = actual.next;
+            if(tipoLista == 2 && actual.next != anterior) actual.next.prev = anterior;
+
+        }
+        size--;
+        IO.println("Elemento eliminado");
     }
 
 }
