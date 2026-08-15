@@ -1,7 +1,7 @@
 # Actividades - Estructura de Datos
 ### En esta rama del repositorio estaran las Actividades entregables de la materia  
 
-- [ ] Actividad 1: 
+- [X] Actividad 1: 
 - [ ] Actividad 2
 - [ ] Actividad 3
 - [ ] Actividad 4
