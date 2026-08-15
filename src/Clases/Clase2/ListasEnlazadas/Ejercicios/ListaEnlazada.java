@@ -17,6 +17,10 @@ public class ListaEnlazada<T> {
     }
 
     // Métodos
+    public void setTipoLista(int tipoLista) {
+        this.tipoLista = tipoLista;
+    }
+
     public boolean isEmpty() {
         return head == null;
     }
@@ -141,5 +145,6 @@ public class ListaEnlazada<T> {
         size--;
         IO.println("Elemento eliminado");
     }
+
 
 }

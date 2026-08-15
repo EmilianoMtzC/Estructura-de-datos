@@ -1,5 +1,7 @@
 package Clases.Clase2.ListasEnlazadas.Ejercicios;
 
+import java.util.List;
+
 public class TiposDeDatos {
     void main() {
         IO.println("Tipos de datos");
@@ -30,4 +32,5 @@ public class TiposDeDatos {
         listaAbstractos.showList();
 
     }
+
 }

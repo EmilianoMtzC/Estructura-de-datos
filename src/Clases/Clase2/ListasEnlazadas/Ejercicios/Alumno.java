@@ -1,6 +1,6 @@
 package Clases.Clase2.ListasEnlazadas.Ejercicios;
 
-public class Alumnos {
+public class Alumno {
 
     //Atributos
     public String nombre;
