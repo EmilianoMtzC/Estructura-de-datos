@@ -1,6 +1,6 @@
 package Clases.Actividad1;
 
-import java.util.Scanner;
+import java.util.Objects;
 
 /**
  * Representa una lista enlazada genérica que puede funcionar como
@@ -18,6 +18,10 @@ public class LinkedList<T> {
 
     // Constructor
     public LinkedList(int listType) {
+        if (listType < 1 || listType > 3) {
+            throw new IllegalArgumentException("Tipo de lista invalido");
+        }
+
         this.listType = listType;
         this.head = null;
         this.tail = null;
@@ -53,6 +57,40 @@ public class LinkedList<T> {
             return;
         }
         IO.print("Datos de la lista: ");
+    }
+
+    // SEARCH
+    /**
+     * Busca un elemento en la lista.
+     * @param data dato que se buscara en la lista.
+     */
+    public boolean searchData(T data) {
+        if (isEmpty()) {
+            return false;
+        }
+
+        Node<T> current = head;
+
+        if (listType == 3) {
+            do {
+                if (Objects.equals(current.data, data)) {
+                    return true;
+                }
+
+                current = current.next;
+            } while (current != head);
+
+        } else {
+            while (current != null) {
+                if (Objects.equals(current.data, data)) {
+                    return true;
+                }
+
+                current = current.next;
+            }
+        }
+
+        return false;
     }
 
 
@@ -111,16 +149,29 @@ public class LinkedList<T> {
             IO.println("La lista esta vacia");
             return;
         }
-        IO.print("Datos de la lista: ");
-        Node<T> current = head;
-        int i = 0;
-        while (current != null) {
-            IO.print(current.data + " ");
-            current = current.next;
-            i++;
-        }
-        IO.println();
 
+        IO.println("Datos de la lista:");
+
+        Node<T> current = head;
+
+        if (listType == 3) {
+
+            do {
+                IO.println(current.data);
+                IO.println("--------------------");
+
+                current = current.next;
+            } while (current != head);
+
+        } else {
+
+            while (current != null) {
+                IO.println(current.data);
+                IO.println("--------------------");
+
+                current = current.next;
+            }
+        }
     }
 
     // UPDATE
@@ -133,41 +184,21 @@ public class LinkedList<T> {
             IO.println("La lista esta vacia");
             return;
         }
-        IO.print("Datos de la lista: ");
-
-        Node<T> current = head;
-        int i = 0;
-
-        while (current != null) {
-            IO.println(i + ": " + current.data);
-
-            current = current.next;
-            i++;
-
-            if (listType == 3 && current == head) {
-                break;
-            }
-        }
-
-        Scanner sc = new Scanner(System.in);
-
-        IO.print("Ingrese el dato que desea modificar: ");
-        int positionInList = sc.nextInt();
 
         if (position < 0 || position >= size) {
             IO.println("Posicion invalida.");
             return;
         }
 
-        current = head;
+        Node<T> current = head;
 
-        for (i = 0; i < position; i++) {
+        for (int i = 0; i < position; i++) {
             current = current.next;
         }
 
         current.data = newData;
+
         IO.println("Dato actualizado correctamente.");
-        sc.close();
     }
 
     // DELETE
@@ -186,7 +217,7 @@ public class LinkedList<T> {
         boolean found = false;
 
         while(current != null) {
-            if(current.data.equals(data)) {
+            if(Objects.equals(current.data, data)) {
                 found = true;
                 break;
             }
@@ -218,6 +249,30 @@ public class LinkedList<T> {
         }
         size--;
         IO.println("Elemento eliminado");
+    }
+
+    /**
+     * Elimina un elemento de la lista utilizando su posicion.
+     * @param position posicion del elemento que se eliminara.
+     */
+    public void deleteData(int position) {
+        if (isEmpty()) {
+            IO.println("La lista esta vacia");
+            return;
+        }
+
+        if (position < 0 || position >= size) {
+            IO.println("Posicion invalida.");
+            return;
+        }
+
+        Node<T> current = head;
+
+        for (int i = 0; i < position; i++) {
+            current = current.next;
+        }
+
+        deleteData(current.data);
     }
 
 }
