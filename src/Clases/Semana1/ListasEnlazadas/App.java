@@ -1,4 +1,4 @@
-package Clases.Clase2.ListasEnlazadas;
+package Clases.Semana1.ListasEnlazadas;
 
 public class App {
     public static void main(String[] args) throws Exception {

@@ -1,6 +1,4 @@
-package Clases.Clase2.ListasEnlazadas.Ejercicios;
-
-import java.util.List;
+/**package Clases.Semana1.ListasEnlazadas.Ejercicios;
 
 public class TiposDeDatos {
     void main() {
@@ -34,3 +32,4 @@ public class TiposDeDatos {
     }
 
 }
+ */

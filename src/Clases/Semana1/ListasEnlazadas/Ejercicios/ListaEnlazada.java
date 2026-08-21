@@ -1,4 +1,4 @@
-package Clases.Clase2.ListasEnlazadas.Ejercicios;
+/**package Clases.Semana1.ListasEnlazadas.Ejercicios;
 
 public class ListaEnlazada<T> {
 
@@ -148,3 +148,4 @@ public class ListaEnlazada<T> {
 
 
 }
+*/

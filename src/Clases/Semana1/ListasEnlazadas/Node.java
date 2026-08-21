@@ -1,4 +1,4 @@
-package Clases.Clase2.ListasEnlazadas;
+package Clases.Semana1.ListasEnlazadas;
 
 class Node<T> {
     public T data; // El dato del nodo

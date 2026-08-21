@@ -1,6 +1,6 @@
-package Clases.Clase2.ListasEnlazadas.Ejercicios;
+/** package Clases.Semana1.ListasEnlazadas.Ejercicios;
 
-public class Alumno {
+public class Alumnos {
 
     //Atributos
     public String nombre;
@@ -8,8 +8,11 @@ public class Alumno {
     public String matricula;
     public String correo;
 
+    public Alumnos(String juan, String number, String number1, String s) {
+    }
+
     //Constructor
-    public Alumnos(String nombre, String telefono, String matricula, String correo) {
+    public void Alumnos (String nombre, String telefono, String matricula, String correo) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.matricula = matricula;
@@ -28,5 +31,5 @@ public class Alumno {
     }
 
 }
-
+*/
 

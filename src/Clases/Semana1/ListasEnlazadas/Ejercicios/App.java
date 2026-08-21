@@ -1,5 +1,4 @@
-package Clases.Clase2.ListasEnlazadas.Ejercicios;
-import java.util.LinkedList;
+/**package Clases.Semana1.ListasEnlazadas.Ejercicios;
 import java.util.Scanner;
 
 public class App<T> {
@@ -67,7 +66,7 @@ public class App<T> {
                         String matricula = sc.nextLine();
                         IO.println("Ingresa el correo del alumno: ");
                         String correo = sc.nextLine();
-                        Alumno alumno = new Alumno(nombre, telefono, matricula, correo);
+                        Alumnos alumno = new Alumnos(nombre, telefono, matricula, correo);
 
                         lista.appendNode(alumno);
                         System.out.println("Elemento insertado");
@@ -80,3 +79,4 @@ public class App<T> {
 
     }
 }
+ */
