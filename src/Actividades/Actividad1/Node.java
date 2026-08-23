@@ -1,4 +1,4 @@
-package Clases.Actividad1;
+package Actividades.Actividad1;
 
 /**
  * Representa un nodo genérico que puede utilizarse como elemento

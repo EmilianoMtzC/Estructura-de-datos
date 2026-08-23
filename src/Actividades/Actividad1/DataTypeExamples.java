@@ -1,4 +1,4 @@
-package Clases.Actividad1;
+package Actividades.Actividad1;
 
 
 /**
