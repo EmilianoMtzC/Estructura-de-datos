@@ -13,7 +13,7 @@ Proyecto académico en Java que utiliza estructuras de datos para administrar cl
 Desde una terminal, clona el repositorio con:
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone https://github.com/EmilianoMtzC/Estructura-de-datos
 cd Estructura-De-Datos
 ```
 
