@@ -1,5 +1,6 @@
 # Sistema de gestión para cafetería
 
+<<<<<<< HEAD
 Proyecto académico en Java que utiliza estructuras de datos para administrar clientes, compras e inventario de una cafetería.
 
 ## Requisitos
@@ -58,3 +59,10 @@ Para comprobar que el código compila:
 ```
 
 El proyecto utiliza una pila para el historial de compras, una cola para la fila de clientes y una tabla hash para el inventario.
+=======
+- [X] Actividad 1: 
+- [X] Actividad 2
+- [X] Actividad 3
+- [ ] Actividad 4
+- [ ] Actividad 5
+>>>>>>> Actividades
