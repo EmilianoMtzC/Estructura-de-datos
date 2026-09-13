@@ -1,4 +1,4 @@
-package Actividades.Actividad4;
+package Actividad4;
 
 import java.util.NoSuchElementException;
 

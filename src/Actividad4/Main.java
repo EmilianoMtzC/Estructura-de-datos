@@ -1,6 +1,5 @@
-package Actividades.Actividad4;
+package Actividad4;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /** Punto de entrada para el gestor de procesos del sistema operativo simulado. */

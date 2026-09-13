@@ -1,4 +1,4 @@
-package Actividades.Actividad4;
+package Actividad4;
 
 /**
  * Cola genérica basada en una lista ligada.

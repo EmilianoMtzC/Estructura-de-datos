@@ -1,4 +1,4 @@
-package Actividades.Actividad4;
+package Actividad4;
 
 /** Representa un proceso dentro del sistema operativo simulado. */
 public class Proceso {
