@@ -14,8 +14,6 @@ public class Main {
         do {
             showMenu();
             option = readInteger("Elige una opcion: ");
-
-            try {
                 switch (option) {
                     case 1 -> addProcess(operatingSystem);
                     case 2 -> System.out.println("Proceso ejecutado: " + operatingSystem.executeNextProcess());
@@ -29,11 +27,7 @@ public class Main {
                     case 0 -> System.out.println("Programa finalizado.");
                     default -> System.out.println("Opcion no valida.");
                 }
-            } catch (NoSuchElementException exception) {
-                System.out.println(exception.getMessage());
-            } catch (IllegalArgumentException exception) {
-                System.out.println(exception.getMessage());
-            }
+
         } while (option != 0);
     }
 
